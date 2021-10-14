@@ -63,7 +63,8 @@ bool ModeGuided::do_user_takeoff_start(float final_alt_above_home)
     }
 
     // initialise yaw
-    auto_yaw.set_mode(AUTO_YAW_HOLD);
+    //auto_yaw.set_mode(AUTO_YAW_HOLD);  // 源码是这句。
+    auto_yaw.set_mode(AUTO_YAW_LOOK_AT_NEXT_WP); 
 
     // clear i term when we're taking off
     set_throttle_takeoff();
@@ -170,7 +171,8 @@ void ModeGuided::angle_control_start()
     guided_angle_state.use_yaw_rate = false;
 
     // pilot always controls yaw
-    auto_yaw.set_mode(AUTO_YAW_HOLD);
+    //auto_yaw.set_mode(AUTO_YAW_HOLD);  //源码是这个。
+    auto_yaw.set_mode(AUTO_YAW_LOOK_AT_NEXT_WP);
 }
 
 // guided_set_destination - sets guided mode's target destination
