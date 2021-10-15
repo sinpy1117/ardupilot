@@ -329,6 +329,19 @@
 # define MODE_LOITER_ENABLED ENABLED
 #endif
 
+/*/////////////////////////////////////////////////////////////////////////////
+// DrawStar mode - 五角星航线模式
+#ifndef MODE_DRAWSTAR_ENABLED
+# define MODE_DRAWSTAR_ENABLED ENABLED
+#endif*/
+
+/////////////////////////////////////////////////////////////////////////////
+// FixLine mode - 固定航线模式
+#ifndef MODE_FIXLINE_ENABLED
+# define MODE_FIXLINE_ENABLED ENABLED
+#endif
+
+
 //////////////////////////////////////////////////////////////////////////////
 // Position Hold - enable holding of global position
 #ifndef MODE_POSHOLD_ENABLED
