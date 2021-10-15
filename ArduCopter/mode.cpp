@@ -170,6 +170,19 @@ Mode *Copter::mode_from_mode_num(const Mode::Number mode)
             ret = &mode_autorotate;
             break;
 #endif
+/*
+#if MODE_DRAWSTAR_ENABLED == ENABLED
+        case Mode::Number::DRAWSTAR:
+            ret = &mode_drawstar;
+            break;
+#endif*/
+
+#if MODE_FIXLINE_ENABLED == ENABLED
+        case Mode::Number::FIXLINE:
+            ret = &mode_fixline;
+            break;
+#endif
+
 
         default:
             break;
