@@ -236,6 +236,8 @@ public:
     friend class ModeThrow;
     friend class ModeZigZag;
     friend class ModeAutorotate;
+    // new mode 
+    friend class ModeFixLine; 
 
     Copter(void);
 
@@ -993,6 +995,11 @@ private:
 #if MODE_AUTOROTATE_ENABLED == ENABLED
     ModeAutorotate mode_autorotate;
 #endif
+#if MODE_FIXLINE_ENABLED == ENABLED
+    ModeFixLine mode_fixline;
+#endif
+
+
 
     // mode.cpp
     Mode *mode_from_mode_num(const Mode::Number mode);
